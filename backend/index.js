@@ -11,8 +11,8 @@ app.use(express.json());
 // Routes
 app.get("/api/ping", (req, res) => res.json({ message: "pong" }));
 app.get("/api/greet", (req, res) => {
-  const name = req.query.name || "World";
-  res.json({ message: `Hello, ${name}!` });
+  const name = req.query.name || "invitado";
+  res.json({ message: `¡Hola, ${name}!` });
 });
 app.get("/api/students", async (req, res) => {
   try {
@@ -26,3 +26,4 @@ app.get("/api/students", async (req, res) => {
 
 // Start the server
 app.listen(port, () => console.log(`App running on port ${port}`));
+
